@@ -94,7 +94,7 @@ export const columnas: TablaReact.ColumnDef<Orden>[] = [
             )
         },
         cell: ({ row }) => {
-            return (<div>{row.getValue("importetotal").toLocaleString('en-US', {
+            return (<div>{(row.getValue("importetotal") as number).toLocaleString('en-US', {
                 style: 'currency',
                 currency: 'USD',
             })}</div>)

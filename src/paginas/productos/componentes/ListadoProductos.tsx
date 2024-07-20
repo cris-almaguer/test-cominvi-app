@@ -51,7 +51,7 @@ const ListadoProductos = ({ ordenes, obtenerOrdenes, productos }: Props) => {
                 <Input
                     placeholder="Filtrar por nombre..."
                     value={(tabla.getColumn("nombre")?.getFilterValue() as string) ?? ""}
-                    onChange={(event: { target: { value: never } }) =>
+                    onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
                         tabla.getColumn("nombre")?.setFilterValue(event.target.value)
                     }
                     className="max-w-sm"
